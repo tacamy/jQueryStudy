@@ -1,0 +1,30 @@
+.md-tabs {
+	margin: 20px;
+}
+.md-tabsNav {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.md-tabsNav li {
+	list-style: none;
+	float: left;
+	margin: 0 5px 0 0;
+}
+.md-tabsNav a {
+	display: block;
+	padding: 5px 10px;
+	background: #eee;
+	color: #000;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.md-tabsNav a.active {
+	background: #ccc;
+	cursor: default;
+}
+.md-tabsPanel {
+	padding: 10px 20px;
+	background: #fff;
+	border: 10px solid #ccc;
+}
