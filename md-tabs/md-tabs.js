@@ -18,9 +18,9 @@ $.fn.tabs = function(options) {
 			ev.preventDefault();
 
 			// パネルを非表示
-        	hidePanel($panels);
+			hidePanel($panels);
 
-        	// タブの.activeを全て解除
+			// タブの.activeを全て解除
 			$navs.removeClass("active");
 
 			// クリックしたタブに.activeをつける
