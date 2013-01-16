@@ -5,7 +5,7 @@
 ## 使い方
 
 - スタート時のアクティブタブを指定するには、`.md-tabsNav > li > a`に`class="active"`をHTMLで指定
-- HTMLのscriptタグかJSファイルに以下の記述が必要
+- プラグインを適用するには、次のスクリプトの`".md-tabs"`部分に適用させたい要素を指定
 ```
 $(function() {
 	$(".md-tabs").tabs();
