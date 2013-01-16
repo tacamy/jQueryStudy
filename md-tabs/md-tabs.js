@@ -1,35 +1,37 @@
-$.fn.tabs = function(options) {
+(function($) { // カプセル化
 
-	// プラグイン本体
-	$(this).each(function() {
+	$.fn.tabs = function(options) {
 
-		// タブとパネルの要素取得
-		var $navs = $(".md-tabsNav a", this);
-		var $panels = $(".md-tabsPanel", this);
+		return this.each(function() {
 
-		// JSオフ対策で、パネル非表示をJSで行う
-		hidePanel($panels);
-		showPanel($navs);
+			// タブとパネルの要素取得
+			var $navs = $(this).find(".md-tabsNav a");
+			var $panels = $(this).find(".md-tabsPanel");
 
-		// タブクリック時の動作
-		$navs.click(function(ev) {
-
-			// aのデフォルトイベントを殺す
-			ev.preventDefault();
-
-			// パネルを非表示
+			// JSオフ対策で、パネル非表示をJSで行う
 			hidePanel($panels);
-
-			// タブの.activeを全て解除
-			$navs.removeClass("active");
-
-			// クリックしたタブに.activeをつける
-			$(this).addClass("active");
-			
-			// アクティブタブのhref先のパネルを表示
 			showPanel($navs);
+
+			// タブクリック時の動作
+			$navs.on("click", function(ev) {
+
+				// aのデフォルトイベントを殺す
+				ev.preventDefault();
+
+				// パネルを非表示
+				hidePanel($panels);
+
+				// タブの.activeを全て解除
+				$navs.removeClass("active");
+
+				// クリックしたタブに.activeをつける
+				$(this).addClass("active");
+				
+				// アクティブタブのhref先のパネルを表示
+				showPanel($navs);
+			});
 		});
-	});
+	};
 
 	// パネルを非表示
 	function hidePanel($panels) {
@@ -43,9 +45,4 @@ $.fn.tabs = function(options) {
 		$(href).slideDown();
 	}
 
-	return this;
-};
-
-$(function() {
-	$(".md-tabs").tabs();
-});
+}(jQuery));
