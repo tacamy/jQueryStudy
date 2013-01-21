@@ -1,4 +1,4 @@
-# md-tabs.js
+# jquery.tabs.js
 
 タブをクリックするとそれに対応するコンテンツを表示するという、ごく普通のタブ切り替えのjQueryプラグインです。
 
@@ -12,7 +12,7 @@
 ### サンプル
 
 	<head>
-	<script src="md-tabs.js"></script>
+	<script src="jquery.tabs.js"></script>
 	<script>
 	$(function() {
 		$(".md-tabs").tabs();
