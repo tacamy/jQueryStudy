@@ -2,6 +2,10 @@
 
 タブをクリックするとそれに対応するコンテンツを表示するという、ごく普通のタブ切り替えのjQueryプラグインです。
 
+## デモ - Demo
+
+[https://dl.dropbox.com/u/368057/study/jquery.tabs/index.html](https://dl.dropbox.com/u/368057/study/jquery.tabs/index.html)
+
 ## 機能 - Function
 
 - タブクリックでコンテンツを表示
