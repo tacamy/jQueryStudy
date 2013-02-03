@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>jquery.tooltip.js</title>
+<style>
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin: 0 10px 10px 0;
+  padding: 10px 20px;
+  background: #eee;
+}
+</style>
+<link rel="stylesheet" href="./jquery.tooltip.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="./jquery.tooltip.js"></script>
+<script>
+$(function() {
+  $('[data-tooltip]').tooltip();
+});
+</script>
+</head>
+<body>
+<h1>jquery.tooltip.js</h1>
+<ul>
+<li data-tooltip="Dは泥酔、Nはナイト（夜）の意味で、「泥酔ナイト」">DN</li>
+<li data-tooltip="神がかって素晴らしい">カミッテル</li>
+<li data-tooltip="別件があるという意味の<br>オヤジギャグ">ベッケンバウアー</li>
+<li data-tooltip="「パターン」のガーリー系の活用事例">パティーン</li>
+<li data-tooltip="「ありがとう」の活用例">ありとーすちゃすてすチャース</li>
+<li data-tooltip="ハスハス（興奮状態）">HASHAS</li>
+<li data-tooltip="イケメン">池様</li>
+</ul>
+</body>
+</html>
