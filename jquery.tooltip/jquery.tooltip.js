@@ -30,8 +30,8 @@
      */
     function showTooltip() {
       $tooltip.stop()
-        .css('opacity',0)
         .show()
+        .css('opacity', 0)
         .animate({opacity: 1}, 600);
     }
     function hideTooltip() {
