@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>jquery.selectItem.js</title>
+<link rel="stylesheet" href="./jquery.selectItem.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="./jquery.selectItem.js"></script>
+<script>
+$(function() {
+  $('.md-selectBox').selectItem({
+    limit: 3
+  });
+});
+</script>
+</head>
+<body>
+<div class="md-selectBox">
+  <div class="md-selectBox-inner">
+    <div class="md-selectBox-from">
+      <ul class="md-items">
+        <li class="md-items-item">
+          <div class="md-items-unit"><img src="http://dummyimage.com/50" width="50" height="50" class="md-items-thumb"/><span class="md-items-text">Hanako Yamada 1</span></div>
+          <button class="md-items-delete">解除</button>
+        </li>
+        <li class="md-items-item">
+          <div class="md-items-unit"><img src="http://dummyimage.com/50" width="50" height="50" class="md-items-thumb"/><span class="md-items-text">Hanako Yamada 2</span></div>
+          <button class="md-items-delete">解除</button>
+        </li>
+        <li class="md-items-item">
+          <div class="md-items-unit"><img src="http://dummyimage.com/50" width="50" height="50" class="md-items-thumb"/><span class="md-items-text">Hanako Yamada 3</span></div>
+          <button class="md-items-delete">解除</button>
+        </li>
+        <li class="md-items-item">
+          <div class="md-items-unit"><img src="http://dummyimage.com/50" width="50" height="50" class="md-items-thumb"/><span class="md-items-text">Hanako Yamada 4</span></div>
+          <button class="md-items-delete">解除</button>
+        </li>
+        <li class="md-items-item">
+          <div class="md-items-unit"><img src="http://dummyimage.com/50" width="50" height="50" class="md-items-thumb"/><span class="md-items-text">Hanako Yamada 5</span></div>
+          <button class="md-items-delete">解除</button>
+        </li>
+        <li class="md-items-item">
+          <div class="md-items-unit"><img src="http://dummyimage.com/50" width="50" height="50" class="md-items-thumb"/><span class="md-items-text">Hanako Yamada 6</span></div>
+          <button class="md-items-delete">解除</button>
+        </li>
+      </ul>
+    </div>
+    <div class="md-selectBox-to">
+      <ul class="md-items">
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
