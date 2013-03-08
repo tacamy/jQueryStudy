@@ -1,6 +1,5 @@
 (function($) {
 
-  // heightAlign
   $.fn.heightAlign = function(options) {
     options = $.extend({
       child: '> *'
