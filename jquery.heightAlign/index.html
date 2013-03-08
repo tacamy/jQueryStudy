@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>jquery.heightAlign.js</title>
+<style>
+.items01,
+.items02 {
+  overflow: hidden;
+  *zoom: 1;
+}
+.item01,
+.item02 {
+  float: left;
+  margin-right: 10px;
+  padding: 20px;
+  background: #EEE;
+  border: 1px solid #CCC;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="./jquery.heightAlign.js"></script>
+<script>
+$(function() {
+  $('.items01').heightAlign();
+  $('.items02').heightAlign({
+    child: '.item02'
+  });
+});
+</script>
+</head>
+<body>
+<h1>jquery.heightAlign</h1>
+
+<h2>直下の子要素の高さ揃え（デフォルト）</h2>
+<div class="items01">
+  <div class="item01">hoge</div>
+  <div class="item01">hoge<br>hogehoge</div>
+  <div class="item01">hoge<br>hogehoge<br>hogehogehoge</div>
+</div>
+
+<h2>子要素のうち指定した要素の高さ揃え（オプション）</h2>
+<div class="items02">
+  <div class="items02-inner">
+  <div class="item02">hoge<br>hogehoge</div>
+  <div class="item02">hoge<br>hogehoge<br>hogehogehoge</div>
+  <div class="item02">hoge<br>hogehoge<br>hogehogehoge<br>hogehogehogehoge</div>
+  </div>
+</div>
+
+</body>
+</html>
