@@ -30,9 +30,9 @@
 	</div>
 	<div class="items02">
 		<div class="items02-inner">
-		<div class="item02">hoge<br>hogehoge</div>
-		<div class="item02">hoge<br>hogehoge<br>hogehogehoge</div>
-		<div class="item02">hoge<br>hogehoge<br>hogehogehoge<br>hogehogehogehoge</div>
+			<div class="item02">hoge<br>hogehoge</div>
+			<div class="item02">hoge<br>hogehoge<br>hogehogehoge</div>
+			<div class="item02">hoge<br>hogehoge<br>hogehogehoge<br>hogehogehogehoge</div>
 		</div>
 	</div>
 	</body>
