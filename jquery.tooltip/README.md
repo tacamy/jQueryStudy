@@ -44,11 +44,8 @@
 ## 対応ブラウザ - Browser
 
 - Internet Explorer 6, 7 (フキダシの三角は表示されない)
-- Internet Explorer 9, 10
+- Internet Explorer 8, 9, 10
 - Firefox
 - Safari
 - Chrome
 
-## TODO
-
-- なぜかIE8でだけ動かないので、調査する。

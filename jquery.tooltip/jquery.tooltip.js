@@ -29,22 +29,19 @@
      * Method
      */
     function showTooltip() {
-      $tooltip.stop()
-        .show()
-        .css('opacity', 0)
-        .animate({opacity: 1}, 600);
+      $tooltip
+        .stop(true, true)
+        .fadeIn(600);
     }
     function hideTooltip() {
-      $tooltip.stop()
-        .animate(
-          {opacity: 0}, 600, function() {
-            $tooltip.hide();
-          });
+      $tooltip
+        .stop(true, true)
+        .fadeOut(600);
     }
     function setPosition(x, y) {
       $tooltip.css({
-        top: y + 15,
-        left: x + 5
+        top: y + 25,
+        left: x - 20
       });
     }
   };
