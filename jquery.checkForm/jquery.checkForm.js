@@ -2,15 +2,11 @@
 
   $.fn.checkForm = function(options) {
     var ERR = -1;
-    var ERRMSG = [
-      '1ブロック目のエラーメッセージ',
-      '2ブロック目のエラーメッセージ',
-      '3ブロック目のエラーメッセージ'
-    ];
 
     options = $.extend({
       errorItemClassName: 'error',
-      errorMessageClassName: 'errorMessage'
+      errorMessageClassName: 'errorMessage',
+      errorMessageText: []
     }, options);
 
     return this.each(function() {
@@ -51,7 +47,7 @@
 
           if(rc === ERR) {
             $self.addClass(options.errorItemClassName);
-            $errorMessageArray.push(ERRMSG[i]);
+            $errorMessageArray.push(options.errorMessageText[i]);
           } else {
             $self.removeClass(options.errorItemClassName);
           }

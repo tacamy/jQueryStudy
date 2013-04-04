@@ -17,7 +17,13 @@
 	<script src="./jquery.checkForm.js"></script>
 	<script>
 	$(function() {
-	  $('[data-type="form"]').checkForm();
+	  $('[data-type="form"]').checkForm({
+	    errorMessageText: [
+	      '1ブロック目のエラーメッセージ',
+	      '2ブロック目のエラーメッセージ',
+	      '3ブロック目のエラーメッセージ'
+	    ]
+	  });
 	});
 	</script>
 	</head>
@@ -46,6 +52,7 @@
 
 - errorItemClassName : エラー箇所のブロックにつけるクラス名を指定できます。
 - errorMessageClassName : エラー内容を表示するボックスのクラス名を指定できます。
+- errorMessageText : [必須] エラー内容のテキストを指定します。requiredのついたブロックの上から順に、自由なメッセージを設定できます。
 
 ## 対応ブラウザ - Browser
 

@@ -23,7 +23,13 @@ form > div {
 <script src="./jquery.checkForm.js" charset="UTF-8"></script>
 <script>
 $(function() {
-  $('[data-type="form"]').checkForm();
+  $('[data-type="form"]').checkForm({
+    errorMessageText: [
+      '1ブロック目のエラーメッセージ',
+      '2ブロック目のエラーメッセージ',
+      '3ブロック目のエラーメッセージ'
+    ]
+  });
 });
 </script>
 </head>
