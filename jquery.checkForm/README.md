@@ -13,7 +13,7 @@
 ### サンプル
 
 	<head>
-	<script src="./jquery.heightAlign.js"></script>
+	<script src="./jquery.checkForm.js"></script>
 	<script>
 	$(function() {
 	  $('[data-type="form"]').checkForm();
