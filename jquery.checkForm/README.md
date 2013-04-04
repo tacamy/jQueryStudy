@@ -37,7 +37,7 @@
 	      <li><label><input type="radio" name="radio" value="2">2</label></li>
 	    </ul>
 	  </div>
-	  <input data-type="submit" type="submit">
+	  <input type="submit" value="Submit" data-type="submit">
 	</form>
 	</body>
 
