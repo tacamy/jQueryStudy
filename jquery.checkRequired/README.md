@@ -1,7 +1,7 @@
 # jquery.checkRequired.js
 
 - フォームの必須項目が埋まっていなければ、送信ボタンがdisabledになって送信できません。
-- 未入力の箇所にクラス属性を付与します。
+- 未入力の必須項目をカウントして表示します。
 - input要素が変更されるたびにチェックを行います。
 
 ## デモ - Demo
@@ -23,7 +23,7 @@
 	<body>
 	<form action="#" method="POST" data-cr-role="form">
 	  <div data-cr-check="required">
-	    <input type="text" name="text" value="">
+	    <input type="text" name="text">
 	  </div>
 	  <div data-cr-check="required">
 	    <ul>
@@ -33,8 +33,8 @@
 	  </div>
 	  <div data-cr-check="required">
 	    <ul>
-	      <li><label><input type="radio">hoge</label></li>
-	      <li><label><input type="radio">fuga</label></li>
+	      <li><label><input type="radio" name="radio">hoge</label></li>
+	      <li><label><input type="radio" name="radio">fuga</label></li>
 	    </ul>
 	  </div>
 	  <input type="submit" value="Submit" data-cr-role="submit">
@@ -43,7 +43,6 @@
 
 ### オプション
 
-- errorItemClassName : エラー箇所のブロックにつけるクラス名を指定できます。
 - errorMessageClassName : エラー内容を表示するボックスのクラス名を指定できます。
 
 ## 対応ブラウザ - Browser
