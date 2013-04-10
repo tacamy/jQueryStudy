@@ -31,7 +31,7 @@
 
           if ($inputItems.is(':text')) {
             rc = checkText($inputItems);
-          } else if ($inputItems.is(':checkbox') || $inputItems.is(':radio')) {
+          } else if ($inputItems.is(':checkbox' || ':radio')) {
             rc = checkChecked($inputItems);
           };
 
