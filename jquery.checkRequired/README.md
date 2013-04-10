@@ -16,7 +16,8 @@
 	<script src="./jquery.checkRequired.js"></script>
 	<script>
 	$(function() {
-	  $('[data-cr-role="form"]').checkRequired();	});
+	  $('[data-cr-role="form"]').checkRequired();
+	});
 	</script>
 	</head>
 	<body>
