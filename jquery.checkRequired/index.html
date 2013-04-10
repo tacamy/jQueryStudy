@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>jquery.checkRequired.js</title>
+<style>
+.error input,
+.error label {
+  background-color: lightpink;
+}
+.errorMessage {
+  color: red;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="./jquery.checkRequired.js" charset="UTF-8"></script>
+<script>
+$(function() {
+  $('[data-cr-role="form"]').checkRequired();
+});
+</script>
+</head>
+<body>
+<h1>jquery.checkRequired</h1>
+
+<form action="#" method="POST" data-cr-role="form">
+  <div data-cr-check="required">
+    <input type="text" name="text" value="">
+  </div>
+  <div data-cr-check="required">
+    <ul>
+      <li><label><input type="checkbox">foo</label></li>
+      <li><label><input type="checkbox">bar</label></li>
+    </ul>
+  </div>
+  <div data-cr-check="required">
+    <ul>
+      <li><label><input type="radio">hoge</label></li>
+      <li><label><input type="radio">fuga</label></li>
+    </ul>
+  </div>
+  <input type="submit" value="Submit" data-cr-role="submit">
+</form>
+
+</body>
+</html>
