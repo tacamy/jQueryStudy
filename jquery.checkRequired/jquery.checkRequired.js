@@ -14,12 +14,12 @@
       var errorCount;
 
       $form.on('submit', preventDefault);
-      errorCount = isInputedRequiredField($requiredItems);
-      switchSubmitButton(errorCount, $submit, $errorMessage);
+      errorCount = countRequiredFieldsNotEntered($requiredItems);
+      switchingFormState(errorCount, $submit, $errorMessage);
 
       $form.on('change', 'input', function() {
-        errorCount = isInputedRequiredField($requiredItems);
-        switchSubmitButton(errorCount, $submit, $errorMessage);
+        errorCount = countRequiredFieldsNotEntered($requiredItems);
+        switchingFormState(errorCount, $submit, $errorMessage);
       });
     });
 
@@ -27,8 +27,8 @@
       e.preventDefault();
     }
 
-    function isInputedRequiredField($requiredItems) {
-      errorCount = 0;
+    function countRequiredFieldsNotEntered($requiredItems) {
+      var errorCount = 0;
 
       $requiredItems.each(function() {
         var $requiredItem = $(this);
@@ -38,7 +38,7 @@
         if ($inputItems.is(':text')) {
           error = hasAnyTextInput($inputItems);
         } else if ($inputItems.is(':checkbox') || $inputItems.is(':radio')) {
-          error = isChecked($inputItems);
+          error = isNotChecked($inputItems);
         };
 
         if (error) errorCount++;
@@ -47,7 +47,7 @@
       return errorCount;
     }
 
-    function switchSubmitButton(errorCount, $submit, $errorMessage) {
+    function switchingFormState(errorCount, $submit, $errorMessage) {
       if (errorCount) {
         $submit
           .attr('disabled', 'disabled')
@@ -69,12 +69,8 @@
       return ($elem.val() === '') ? true : false;
     }
 
-    function isChecked($elem) {
-      var $checked = $elem.filter(function() {
-        return $(this).prop('checked') === true;
-      });
-
-      return ($checked.length === 0) ? true : false;
+    function isNotChecked($elem) {
+      return (!$elem.is(':checked')) ? true : false;
     }
   };
 }(jQuery));

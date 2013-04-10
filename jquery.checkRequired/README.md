@@ -12,34 +12,43 @@
 
 ### サンプル
 
-	<head>
-	<script src="./jquery.checkRequired.js"></script>
-	<script>
-	$(function() {
-	  $('[data-cr-role="form"]').checkRequired();
-	});
-	</script>
-	</head>
-	<body>
-	<form action="#" method="POST" data-cr-role="form">
-	  <div data-cr-check="required">
-	    <input type="text" name="text">
-	  </div>
-	  <div data-cr-check="required">
-	    <ul>
-	      <li><label><input type="checkbox">foo</label></li>
-	      <li><label><input type="checkbox">bar</label></li>
-	    </ul>
-	  </div>
-	  <div data-cr-check="required">
-	    <ul>
-	      <li><label><input type="radio" name="radio">hoge</label></li>
-	      <li><label><input type="radio" name="radio">fuga</label></li>
-	    </ul>
-	  </div>
-	  <input type="submit" value="Submit" data-cr-role="submit">
-	</form>
-	</body>
+    <head>
+    <script src="./jquery.checkRequired.js"></script>
+    <script>
+    $(function() {
+      $('[data-cr-role="form"]').checkRequired();
+    });
+    </script>
+    </head>
+    <body>
+    <form action="#" method="POST" data-cr-role="form">
+      <table>
+        <tr data-cr-check="required">
+          <th>Textbox *</th>
+          <td><input type="text" name="text"></td>
+        </tr>
+        <tr>
+          <th>Textbox</th>
+          <td><input type="text" name="text"></td>
+        </tr>
+        <tr data-cr-check="required">
+          <th>Checkbox *</th>
+          <td>
+            <label><input type="checkbox">foo</label>
+            <label><input type="checkbox">bar</label>
+          </td>
+        </tr>
+        <tr data-cr-check="required">
+          <th>Radio *</th>
+          <td>
+            <label><input type="radio" name="radio">hoge</label>
+            <label><input type="radio" name="radio">fuga</label>
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="Submit" data-cr-role="submit">
+    </form>
+    </body>
 
 ### オプション
 
