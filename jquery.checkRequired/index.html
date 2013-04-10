@@ -4,12 +4,22 @@
 <meta charset="UTF-8">
 <title>jquery.checkRequired.js</title>
 <style>
-.error input,
-.error label {
-  background-color: lightpink;
-}
 .errorMessage {
-  color: red;
+  color: gray;
+  font-size: .8em;
+}
+input[type="submit"] {
+  width: 100px;
+  background: #333;
+  border: none;
+  color: #FFF;
+  font-size: inherit;
+  cursor: pointer;
+}
+input[type="submit"]:disabled {
+  background: #DDD;
+  color: #BBB;
+  cursor: default;
 }
 </style>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -25,7 +35,7 @@ $(function() {
 
 <form action="#" method="POST" data-cr-role="form">
   <div data-cr-check="required">
-    <input type="text" name="text" value="">
+    <input type="text" name="text">
   </div>
   <div data-cr-check="required">
     <ul>
