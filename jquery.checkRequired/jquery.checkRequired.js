@@ -14,12 +14,12 @@
       var errorCount;
 
       $form.on('submit', preventDefault);
-      errorCount = countRequiredFieldsNotEntered($requiredItems);
-      switchingFormState(errorCount, $submit, $errorMessage);
+      errorCount = countEmptyFields($requiredItems);
+      switchFormState(errorCount, $submit, $errorMessage);
 
       $form.on('change', 'input', function() {
-        errorCount = countRequiredFieldsNotEntered($requiredItems);
-        switchingFormState(errorCount, $submit, $errorMessage);
+        errorCount = countEmptyFields($requiredItems);
+        switchFormState(errorCount, $submit, $errorMessage);
       });
     });
 
@@ -27,12 +27,12 @@
       e.preventDefault();
     }
 
-    function countRequiredFieldsNotEntered($requiredItems) {
+    function countEmptyFields($items) {
       var errorCount = 0;
 
-      $requiredItems.each(function() {
-        var $requiredItem = $(this);
-        var $inputItems = $requiredItem.find('input');
+      $items.each(function() {
+        var $item = $(this);
+        var $inputItems = $item.find('input');
         var error;
 
         if ($inputItems.is(':text')) {
@@ -47,7 +47,7 @@
       return errorCount;
     }
 
-    function switchingFormState(errorCount, $submit, $errorMessage) {
+    function switchFormState(errorCount, $submit, $errorMessage) {
       if (errorCount) {
         $submit
           .attr('disabled', 'disabled')
@@ -66,11 +66,11 @@
     }
 
     function hasAnyTextInput($elem) {
-      return ($elem.val() === '') ? true : false;
+      return ($elem.val() === '');
     }
 
     function isNotChecked($elem) {
-      return (!$elem.is(':checked')) ? true : false;
+      return (!$elem.is(':checked'));
     }
   };
 }(jQuery));
