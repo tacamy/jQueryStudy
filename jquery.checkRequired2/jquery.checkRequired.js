@@ -6,14 +6,13 @@
       errorClass: 'err'
     }, options);
 
-    return this.each(function() {
+    this.each(function() {
       var $form = $(this);
       var $submit = $form.find('input[type="submit"]');
       var $requiredTexts = $form.find('input[type="text"][data-required]');
       var $requiredTextareas = $form.find('textarea[data-required]');
       var $requiredSelects = $form.find('select[data-required]');
       var $requiredChecks = $form.find('ul[data-required]');
-      var error = false;
       
       $requiredTexts.each(function() {
         checkText($(this));
@@ -66,15 +65,15 @@
     }
     
     function checkText($elem) {
-      error = hasAnyTextInput($elem);
+      var error = hasAnyTextInput($elem);
       toggleErrorClass($elem, error);
     }
     function checkSelect($elem) {
-      error = isNotSelected($elem);
+      var error = isNotSelected($elem);
       toggleErrorClass($elem, error);
     }
     function checkCheck($elem) {
-      error = isNotChecked($elem.find('input'));
+      var error = isNotChecked($elem.find('input'));
       toggleErrorClass($elem, error);
     }
     
@@ -95,5 +94,6 @@
         $form.off('submit', preventDefault);
       }
     }
+    return this;
   };
 }(jQuery));
