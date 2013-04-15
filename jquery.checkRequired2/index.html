@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>jquery.checkRequired.js</title>
+<style>
+.err {
+  background: pink;
+}
+input[type="submit"] {
+  width: 150px;
+  height: 30px;
+  background: #333;
+  border: none;
+  color: #FFF;
+  font-size: inherit;
+  cursor: pointer;
+}
+input[type="submit"]:disabled {
+  background: #DDD;
+  color: #BBB;
+  cursor: default;
+}
+table {
+  margin: 0 0 20px;
+}
+table th,
+table td {
+  padding: 0 20px 0 0;
+  font-weight: normal;
+  text-align: left;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="./jquery.checkRequired.js" charset="UTF-8"></script>
+<script>
+$(function() {
+  $('form[name="form"]').checkRequired();
+});
+</script>
+</head>
+<body>
+<h1>jquery.checkRequired</h1>
+
+<form action="#" method="POST" name="form">
+  <table>
+    <tr>
+      <th>Textbox *</th>
+      <td>
+        <input type="text" name="text" data-required>
+        <input type="text" name="text" data-required>
+      </td>
+    </tr>
+    <tr>
+      <th>Textbox</th>
+      <td><input type="text" name="text"></td>
+    </tr>
+    <tr>
+      <th>Textarea *</th>
+      <td><textarea data-required></textarea></td>
+    </tr>
+    <tr>
+      <th>Textarea</th>
+      <td><textarea></textarea></td>
+    </tr>
+    <tr>
+      <th>Checkbox *</th>
+      <td>
+        <ul data-required>
+          <li><label><input type="checkbox">foo</label></li>
+          <li><label><input type="checkbox">bar</label></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th>Checkbox *</th>
+      <td>
+        <ul data-required>
+          <li><label><input type="checkbox">foo</label></li>
+          <li><label><input type="checkbox">bar</label></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th>Checkbox</th>
+      <td>
+        <ul>
+          <li><label><input type="checkbox">foo</label></li>
+          <li><label><input type="checkbox">bar</label></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th>Radio *</th>
+      <td>
+        <ul data-required>
+          <li><label><input type="radio" name="radio">hoge</label></li>
+          <li><label><input type="radio" name="radio">fuga</label></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th>Radio *</th>
+      <td>
+        <ul data-required>
+          <li><label><input type="radio" name="radio2">hoge</label></li>
+          <li><label><input type="radio" name="radio2">fuga</label></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th>Radio</th>
+      <td>
+        <ul>
+          <li><label><input type="radio" name="radio3">hoge</label></li>
+          <li><label><input type="radio" name="radio3">fuga</label></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th>Select *</th>
+      <td>
+        <select data-required>
+          <option val="">選択してください</option>
+          <option val="hoge">hoge</option>
+          <option val="fuga">fuga</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th>Select *</th>
+      <td>
+        <select data-required>
+          <option val=",">選択してください</option>
+          <option val="hoge, hoge">hoge</option>
+          <option val="fuga, fuga">fuga</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th>Select</th>
+      <td>
+        <select>
+          <option val="">選択してください</option>
+          <option val="hoge">hoge</option>
+          <option val="fuga">fuga</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
