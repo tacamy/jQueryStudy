@@ -86,7 +86,7 @@
     }
     
     function switchDisabled($elem, $form) {
-      if ($form.find('.err').length) {
+      if ($form.find('.' + options.errorClass).length) {
         $elem.attr('disabled', 'disabled');
         $form.on('submit', preventDefault);
       } else {
