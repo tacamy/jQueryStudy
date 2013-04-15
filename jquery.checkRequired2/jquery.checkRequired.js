@@ -29,10 +29,10 @@
       
       switchDisabled($submit, $form);
 
-      $requiredTexts.on('blur', function() {
+      $requiredTexts.on('change blur', function() {
         checkText($(this));
       });
-      $requiredTextareas.on('blur', function() {
+      $requiredTextareas.on('change blur', function() {
         checkText($(this));
       });
       $requiredSelects.on('change blur', function() {
